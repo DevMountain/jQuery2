@@ -50,10 +50,10 @@ $(document).ready(function(){
           $('#newList').append('<a href="#"" class="" id="item"><li class="list-group-item">' + listo[i].task + '<span class="glyphicon glyphicon-circle-arrow-right pull-right"></span></li></a>');
         } else if (listo[i].id === 'inProgress') {
           console.log('In progress item: ', listo[i]);
-          $('#inProgress').append('<a href="#"" class="" id="item"><li class="list-group-item">' + listo[i].task + '<span class="glyphicon glyphicon-circle-arrow-right pull-right"></span></li></a>');
+          $('#currentList').append('<a href="#"" class="" id="inProgress"><li class="list-group-item">' + listo[i].task + '<span class="glyphicon glyphicon-circle-arrow-right pull-right"></span></li></a>');
         } else if (listo[i].id === 'archived') {
           console.log('Archived item: ', listo[i]);
-          $('#archived').append('<a href="#"" class="" id="item"><li class="list-group-item">' + listo[i].task + '<span class="glyphicon glyphicon-trash pull-right"></span></li></a>');
+          $('#archivedList').append('<a href="#"" class="" id="archived"><li class="list-group-item">' + listo[i].task + '<span class="glyphicon glyphicon-trash pull-right"></span></li></a>');
         }
       }
     } else {
