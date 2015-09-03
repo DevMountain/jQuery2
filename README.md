@@ -303,7 +303,7 @@ We can also move the items from 'inProgress' to 'archived' with a similar functi
 
 
 
-Finally, in a similar fashion we want to create a way to delete the items on the list. All we have to do is pass a task into the advanceTask function without a new id. You can study the advanceTask function we built to understand how it works! 
+Finally, in a similar fashion we want to create a way to delete the items on the list. All we have to do is pass a task into the advanceTask function without a new id. You can study the advanceTask function we built to understand how it works!   
 
 *app.js*
 
