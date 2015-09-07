@@ -294,6 +294,21 @@ We are also going to change it's ID to the string 'inProgress'.
         this.id = 'inProgress';
 	});
 
+As you can see, we use advanceTask by passing in an individual task and it does something to hopefully move it around as expected. let's start by defining the function.
+
+*app.js*
+
+	var advanceTask = function (task) {
+	
+	}
+
+The desired functionality can be achieved by simply removing that task, as long as we are also adding it to another list, which we'll do in the next step.
+
+*app.js*
+
+	var advanceTask = function (task) {
+	    $(task).remove();
+	}
 
 The last thing this function needs is the ability to move the actual list item. We do that by pulling all of the html around the item itself.
 
@@ -324,7 +339,7 @@ We can also move the items from 'inProgress' to 'archived' with a similar functi
 
 
 
-Finally, in a similar fashion we want to create a way to delete the items on the list. All we have to do is pass a task into the advanceTask function without a new id. You can study the advanceTask function we built to understand how it works! 
+Finally, in a similar fashion we want to create a way to delete the items on the list. All we have to do is pass a task into the advanceTask function without a new id. You can study the advanceTask function we built to understand how we are using it!   
 
 *app.js*
 
