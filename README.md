@@ -23,7 +23,7 @@ First, fork and clone this repo, so that we can access this README during our de
 
 Now, let's create a folder called 'app.' This is where we will store the guts of our app. Inside the app folder let's make a folder called 'scripts.' This is where we will store all our Javascript. 
 
-Inside the js folder we will create our main Javascript named 'app.js'. 
+Inside the js folder we will create our main Javascript file named 'app.js'. 
 
 Then, inside the app folder we will create a folder called 'styles', this is where we will store our CSS files. Inside the 'styles' folder let's make a file called 'main.css' so that we have a place to style our markup. 
 
@@ -37,7 +37,7 @@ Now that we've made our basic files, we want to get them all hooked together in 
 #Step 2
 ###Time For jQuery
 
-Now that we have our environment set up and our markup written, it's time to get use some jQuery. 
+Now that we have our environment set up and our markup written, it's time to write some jQuery. 
 
 The first thing we want to do is go into our app.js file and create our document ready function:
 
