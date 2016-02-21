@@ -1,6 +1,21 @@
 $(document).ready(function(){
   $('#newTaskForm').hide();
   var listo = [];
+  if(localStorage.session){
+    listo = JSON.parse(localStorage.session).key;
+    for(var x in listo){
+      switch(listo[x].id){
+        case "new":
+          $('#newList').append('<a href="#" class="" id="item"><li class="list-group-item">' + listo[x].task + '<span class="arrow pull-right"><i class="glyphicon-arrow-right"></span></li></a>');
+          break;
+        case "inProgress":
+          $('#currentList').append('<a href="#" class="" id="inProgress"><li class="list-group-item">' + listo[x].task + '<span class="arrow pull-right"><i class="glyphicon-arrow-right"></span></li></a>');
+          break;
+        default:
+          $('#archivedList').append('<a href="#" class="" id="archived"><li class="list-group-item">' + listo[x].task + '<span class="arrow pull-right"><i class="glyphicon-arrow-right"></span></li></a>');
+      }
+    }
+  }
 
   function Task(item){
     this.task = item;
@@ -74,4 +89,7 @@ $(document).ready(function(){
   });
 
 
+  $(window).unload(function(){
+    localStorage.session = JSON.stringify({ key: listo });
+  });
 });
