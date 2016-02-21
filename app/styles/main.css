@@ -1,0 +1,23 @@
+.panel {
+  margin-top: 30px;
+  display: inline-block;;
+  width: 30%;
+  vertical-align:top;
+}
+
+form {
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+ .new-item-header {
+   display: inline-block;
+   position: absolute;
+   left: 5px;
+   top: 5px;
+ }
+
+ul {
+  margin-top: 0;
+}

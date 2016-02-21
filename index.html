@@ -2,9 +2,29 @@
 <html>
 <head>
 	<title>Listo</title>
-	</head>
-<body>
+	<link rel="stylesheet" href="/app/styles/main.css" media="screen" title="no title" charset="utf-8">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="app/scripts/app.js"></script>
+</head>
+
+<body>
+	<div class="new-item-header"><button class="pull-right pencil" id="newListItem">New</button></div>
+	<form id="newTaskForm">
+		<input id="newItemInput" placeholder="new task">
+		<button id="saveNewItem">Save</button>
+		<button id="cancel">Cancel</button>
+	</form>
+
+	<!-- New List Items -->
+	<div class="panel" id="newList">New List</div>
+
+	<div class="panel">
+	  In Progress
+	  <ul class="list-group" id="currentList"></ul>
+	</div>
+	<div class="panel">
+	  Archived
+	  <ul class="list-group" id="archivedList"></ul>
+	</div>
 </body>
 </html>
