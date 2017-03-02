@@ -154,7 +154,7 @@ var addTask = function(task) {
 
 		$('#newItemInput').val('');
 		  $('#newList').append(
-                        '<a href="#finish" class="" id="item">' +
+                        '<a href="#finish" class="" id="' + task.id + '">' +
                         '<li class="list-group-item">' +
                         '<h3>' + task.task + '</h3>'+
                         '<span class="arrow pull-right">' +
@@ -188,7 +188,7 @@ var addTask = function(task) {
 		$('#newItemInput').val('');
 
 		 $('#newList').append(
-                        '<a href="#finish" class="" id="item">' +
+                        '<a href="#finish" class="" id="' + task.id + '">' +
                         '<li class="list-group-item">' +
                         '<h3>' + task.task + '</h3>' +
                         '<span class="arrow pull-right">' +
@@ -271,7 +271,7 @@ We need to include this function in our code. We will refer to this function in 
 var advanceTask = function(task) {
   var modified = task.innerText.trim()
   for (var i = 0; i < listo.length; i++) {
-    if (listo[i].task === modified) {
+    if (listo[i].task.toUpperCase() === modified) {
       if (listo[i].id === 'new') {
         listo[i].id = 'inProgress';
       } else if (listo[i].id === 'inProgress') {
@@ -315,7 +315,7 @@ We are also going to change it's ID to the string 'inProgress'.
 
 *scripts.js*
 ```javascript
-$(document).on('click', '#item', function(e) {
+$(document).on('click', '#new', function(e) {
 	e.preventDefault();
   var task = this;		
   advanceTask(task);
@@ -327,7 +327,7 @@ The last thing this function needs is the ability to move the actual list item. 
 
 *scripts.js*
 ```javascript
-$(document).on('click', '#item', function(e) {
+$(document).on('click', '#new', function(e) {
 	e.preventDefault();
   var task = this;		
   advanceTask(task);
