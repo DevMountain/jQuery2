@@ -46,9 +46,11 @@
     color: #fff;
 }
 
-#newList h3 {
-  margin-bottom: 10px;
+li h3 {
+    padding-top: 10px;
 }
+
+
 
 .todo-img-container {
     width: 50px;

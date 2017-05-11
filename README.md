@@ -1,9 +1,27 @@
+CHANGE LOG:
+
+#1. added an event listener that listens for the enter key.
+this opens the input div without having to click the button
+
+#2. added an event listener that listens for the enter key.
+this adds the textinput to the new todo list div without having to click the button
+
+#3. fixed a few minor issues with line height/padding on the list items and underneath the title on the first div
+
+#4. added spaces in between the octothorpes and the section titles (in README file) to fix formatting issues
+
+
+
+
+
+
+
 <img src="https://devmounta.in/img/logowhiteblue.png" width="250" align="right">
 
 Listo with jQuery
 =================
 
-#Objective
+# Objective
 
 Create an interactive "to-do" list with jQuery
 
@@ -17,9 +35,9 @@ With this to-do app, users will be able to:
 ![alt text](https://github.com/DevMountain/jQuery2/blob/master/jQuery2%20Example.png?raw=true, "Title Text")
 
 
-##Step 1
+## Step 1
 
-###Our Environment
+### Our Environment
 
 First, fork and clone this repo, so that we can access this README during our development. For the sake of simplicity, we have created the index.html file and added some markup for the ui. So, no need to change it yet.
 
@@ -34,10 +52,10 @@ Now that we've made our basic files, we want to get them all hooked together in 
 *Remember: your browser will read your index.html from top-to-bottom, left-to-right. This means if you put your jQuery under your scripts.js file you will end up with an error.*
 
 
-#Step 2
-###Time For jQuery
+# Step 2
+### Time For jQuery
 
-Now that we have our environment set up and our markup written, it's time to use some jQuery. 
+Now that we have our environment set up and our markup written, it's time to use some jQuery.
 
 The first thing we want to do is go into our scripts.js file and create our document ready function:
 
@@ -53,7 +71,7 @@ $(document).ready(function() {
 
 This allows us to initialize our jQuery code when the document loads. It might look a bit weird, but it's what we do when we're working with jQuery. Remember, all of the code in our scripts.js will go within the curly braces of the above function.
 
-###Basic Architecture
+### Basic Architecture
 
 We are going to be creating a todo list. So the easiest way to store a list of things is to create an array!
 
@@ -106,7 +124,7 @@ src="./app/scripts/scripts.js">
 </script>
 ```
 
-###Making our addTask function
+### Making our addTask function
 
 When we enter something into the input field and hit save, we want to create an object and push it to our array.
 
@@ -231,9 +249,9 @@ Finally, let's make it so that we can open and close the new task form with the 
 ```
 
 
-##Step 3
+## Step 3
 
-###Task Progression HTML
+### Task Progression HTML
 
 Before we make it possible to move our tasks from in progress to archived, we want create a space for them to exist in our HTML. We will do this in a very minimalist way in order to get things in a way they make sense.
 
@@ -261,8 +279,8 @@ The css is already done for the progress-box class
 
 
 
-##Step 4
-###Starting, Finishing, and Deleting Tasks
+## Step 4
+### Starting, Finishing, and Deleting Tasks
 
 We need to include this function in our code. We will refer to this function in a minute, so for now, just include the function at the top of your app.
 
@@ -371,7 +389,7 @@ Perhaps it's not so important with a todolist, but it's good to start thinking a
 
 
 ## Black Diamond: Local Storage
-###Our Browser's Brain
+### Our Browser's Brain
 
 The final step for the todo list is to save our list items on local storage. Local storage allows our app to access the browsers built in storage. We can save a limited amount of data in cool ways. This means if we close our browser our list items will still be there!
 
