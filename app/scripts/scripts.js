@@ -92,6 +92,7 @@ $(document).keypress(function(e) {
     if(e.which == 13) {
       var task = $('#newItemInput').val().trim();
       addTask(task);
+      $('#newItemInput').focus();
     }
 });
 
